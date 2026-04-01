@@ -4,4 +4,5 @@ export type UserType = {
     mother: string;
     spouse: string;
     age: number;
+    isAdmin: boolean;
 };

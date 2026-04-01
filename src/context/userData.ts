@@ -6,4 +6,5 @@ export const myData: UserType = {
     mother: "Gomathi",
     spouse: "Jeyasuriya",
     age: 33,
+    isAdmin: false
 };
