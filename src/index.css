@@ -130,3 +130,31 @@ li {
   align-items: center;
   margin-top: 2rem;
 }
+
+.li-posts {
+  text-align: left;
+}
+
+.deleteButton,
+.editButton {
+  font-size: 1rem;
+  padding: 0.25rem;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 6rem;
+}
+
+input {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  min-width: 30rem;
+}
+
+textarea {
+  padding: 0.5rem;
+  min-height: 5rem;
+  resize: none;
+  min-height: 6rem;
+  min-width: 30rem;
+}

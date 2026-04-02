@@ -1,4 +1,4 @@
-import type { UserType } from "../types/usertypes";
+import type { UserType } from "../types/userType";
 
 export const myData: UserType = {
     firstname: "Muthukannan",

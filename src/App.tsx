@@ -8,8 +8,9 @@ import { ThemeProvider } from './context/ThemeProvider';
 import ContentComponent from './components/ContentComponent';
 // import PromiseFetch from './components/PromiseFetch';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import DisplayPosts from './components/APIPosts';
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <div className="container">
@@ -18,7 +19,7 @@ function App() {
             <Link to="/">ComponentB</Link>
             <Link to="/blog">BlogPage</Link>
             <Link to="/content">ContentComponent</Link>
-            <Link to="/">Fetch API</Link>
+            <Link to="/posts">Display Posts</Link>
           </li>
         </nav>
       </div>
@@ -38,9 +39,8 @@ function App() {
             <ContentComponent />
           </ThemeProvider>
         } />
+        <Route path="/posts" element={<DisplayPosts />}></Route>
       </Routes>
     </BrowserRouter>
   )
 }
-
-export default App;
