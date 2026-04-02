@@ -4,6 +4,8 @@ import ComponentB from './components/ComponentB'
 import { myData } from './context/userData';
 import UserInfoContext from './context/UserInfoContext';
 import BlogPage from './components/BlogPage';
+import { ThemeProvider } from './context/ThemeProvider';
+import ContentComponent from './components/ContentComponent';
 
 function App() {
   return (
@@ -14,6 +16,9 @@ function App() {
       <UserInfoContext.Provider value={myData}>
         <BlogPage />
       </UserInfoContext.Provider>
+      <ThemeProvider>
+        <ContentComponent />
+      </ThemeProvider>
     </>
   )
 }

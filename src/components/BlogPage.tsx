@@ -6,7 +6,7 @@ export default function BlogPage() {
     const userInfo = useContext(UserInfoContext);
 
     return (
-        <div>
+        <div className="blog-page">
             <h1>Blog Page</h1>
             <p>This is the blog page content.</p>
             <p>{userInfo.firstname}</p>
