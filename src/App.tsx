@@ -6,20 +6,40 @@ import UserInfoContext from './context/UserInfoContext';
 import BlogPage from './components/BlogPage';
 import { ThemeProvider } from './context/ThemeProvider';
 import ContentComponent from './components/ContentComponent';
+// import PromiseFetch from './components/PromiseFetch';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <>
-      <MessageContext.Provider value={myData}>
-        <ComponentB />
-      </MessageContext.Provider>
-      <UserInfoContext.Provider value={myData}>
-        <BlogPage />
-      </UserInfoContext.Provider>
-      <ThemeProvider>
-        <ContentComponent />
-      </ThemeProvider>
-    </>
+    <BrowserRouter>
+      <div className="container">
+        <nav>
+          <li>
+            <Link to="/">ComponentB</Link>
+            <Link to="/blog">BlogPage</Link>
+            <Link to="/content">ContentComponent</Link>
+            <Link to="/">Fetch API</Link>
+          </li>
+        </nav>
+      </div>
+      <Routes>
+        <Route path="/" element={
+          <MessageContext.Provider value={myData}>
+            <ComponentB />
+          </MessageContext.Provider>
+        } />
+        <Route path="/blog" element={
+          <UserInfoContext.Provider value={myData}>
+            <BlogPage />
+          </UserInfoContext.Provider>
+        } />
+        <Route path="/content" element={
+          <ThemeProvider>
+            <ContentComponent />
+          </ThemeProvider>
+        } />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

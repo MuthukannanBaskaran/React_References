@@ -113,3 +113,20 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+a {
+  padding: 0.25rem;
+  margin: 0.25rem;
+  font-size: 1.25rem;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
