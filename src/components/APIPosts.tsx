@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getPosts, deletePosts, updatePost } from "../services/postService";
+import { getPosts, deletePosts } from "../services/postService";
 import type { GetPostType } from "../types/postType";
 import CreatePostForm from "./CreatePostForm";
 
