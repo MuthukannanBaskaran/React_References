@@ -9,6 +9,7 @@ import ContentComponent from './components/ContentComponent';
 // import PromiseFetch from './components/PromiseFetch';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import DisplayPosts from './components/APIPosts';
+import UnitTesting from './components/UnitTesting';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             <Link to="/blog">BlogPage</Link>
             <Link to="/content">ContentComponent</Link>
             <Link to="/posts">Display Posts</Link>
+            <Link to="/unittesting">Unit Testing</Link>
           </li>
         </nav>
       </div>
@@ -40,6 +42,7 @@ export default function App() {
           </ThemeProvider>
         } />
         <Route path="/posts" element={<DisplayPosts />}></Route>
+        <Route path="/unittesting" element={<UnitTesting />}></Route>
       </Routes>
     </BrowserRouter>
   )

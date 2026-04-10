@@ -185,3 +185,13 @@
     border-right-color: var(--border);
   }
 }
+
+.status-paid {
+  color: green;
+  font-size: 1.5em;
+}
+
+.status-overdue {
+  color: red;
+  font-size: 2em;
+}
